@@ -1,6 +1,11 @@
 #include <iostream>
 
+using namespace std;
+
 int main() {
-	std::cout << "Hello, your first line of code :)" << std::endl;
+
+	constexpr int WORD_LENGTH = 7;
+	cout << "Welcome to Bulls and Cows." << endl;
+	cout << "Can you guess the " << WORD_LENGTH << " letter isogram I'm thinking of?\n";
 	return 0;
 }
