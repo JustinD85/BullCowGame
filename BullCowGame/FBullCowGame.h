@@ -10,7 +10,7 @@ public:
     bool CheckGuessValidity(std::string); //TODO enhance return value.
 
 private:
-    int MyCurrentTry;
-    int MyMaxTries;
+    int MyCurrentTry = 1;
+    int MyMaxTries = 5;
     bool IsIsoGram();
 };
