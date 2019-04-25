@@ -27,11 +27,18 @@ void PrintIntro()
 
 void PlayGame()
 {
+    BCGame.Reset();
     // loop for number of turns asking for guesses
+    //TODO change to while loop after checking for valid guess function is complete
     for (int i = 0; i < BCGame.GetMaxTries(); i++) {
-        std::string Guess = GetGuess();
+        std::string Guess = GetGuess();//TODO check for valid guess
+
+        //Submit valid guess to game
+        //Print number of bulls and cows
         std::cout << "your guess was " << Guess << std::endl;
     }
+
+    // TODO summarize game
 }
 
 bool AskToPlayAgain()
