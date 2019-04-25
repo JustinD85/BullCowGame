@@ -5,7 +5,7 @@ class FBullCowGame {
 public:
     void Reset(); //TODO enhance return value.
     int GetMaxTries();
-    int GetCurrentTry;
+    int GetCurrentTry();
     bool IsGameWon();
     bool CheckGuessValidity(std::string); //TODO enhance return value.
 
