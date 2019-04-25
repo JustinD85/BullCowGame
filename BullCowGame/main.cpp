@@ -5,20 +5,22 @@ using namespace std;
 
 void PrintIntro();
 void PlayGame();
+bool AskToPlayAgain();
 string GetGuess();
 
 //Entry point of application
-int main() {
-
+int main()
+{
     PrintIntro();
-
     PlayGame();
+    AskToPlayAgain();
     return 0;
 }
 
 
 // Game introduction
-void PrintIntro() {
+void PrintIntro()
+{
     constexpr int WORD_LENGTH = 7;
     cout << "Welcome to Bulls and Cows." << endl;
     cout << "Can you guess the " << WORD_LENGTH << " letter isogram I'm thinking of?\n";
@@ -34,7 +36,17 @@ void PlayGame()
     }
 }
 
-string GetGuess() {
+bool AskToPlayAgain()
+{
+    cout << "Do you want to play again? ";
+    string Response = "";
+    getline(cin, Response);
+    return (Response[0] == 'y' || Response[0] == 'Y');
+
+}
+
+string GetGuess()
+{
     // Get guess from player
     string Guess = "";
     getline(cin, Guess);
