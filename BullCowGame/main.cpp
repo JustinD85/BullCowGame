@@ -28,9 +28,8 @@ int main()
 
 void PrintIntro()
 {
-    constexpr int32 WORD_LENGTH = 7;
     std::cout << "Welcome to Bulls and Cows." << std::endl;
-    std::cout << "Can you guess the " << WORD_LENGTH << " letter isogram I'm thinking of?\n";
+    std::cout << "Can you guess the " << BCGame.GetHiddenWordLength() << " letter isogram I'm thinking of?\n";
 }
 
 void PlayGame()
