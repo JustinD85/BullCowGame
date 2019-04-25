@@ -2,7 +2,7 @@
 
 FBullCowGame::FBullCowGame()
 {
-    FBullCowGame::Reset();
+    Reset();
 }
 
 FBullCowGame::~FBullCowGame()
@@ -16,6 +16,10 @@ void FBullCowGame::Reset()
 {
     constexpr int32 MAX_TRIES = 8;
     MyMaxTries = MAX_TRIES;
+
+    const FString HIDDEN_WORD = "planet";
+    MyHiddenWord = HIDDEN_WORD;
+
     MyCurrentTry = 1;
 }
 
@@ -30,12 +34,19 @@ bool FBullCowGame::CheckGuessValidity(FString)
     return false;
 }
 
-BullCowCount FBullCowGame::SubmitGuess(FString)
+//receives a VALID guess ,increments turn, returns count
+FBullCowCount FBullCowGame::SubmitGuess(FString)
 {
-    return BullCowCount();
+    // increment turn number
+    MyCurrentTry++;
+    // setup a return variable
+    FBullCowCount BullCowCount;
+    //loop through all letters in the guess
+        // compare letters against the hidden word
+            //if match
+                //increment bulls if in same place
+                //increment cows if not
+
+    return BullCowCount;
 }
 
-bool FBullCowGame::IsIsoGram()
-{
-    return false;
-}
