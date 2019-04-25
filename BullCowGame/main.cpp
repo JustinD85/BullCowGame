@@ -28,7 +28,7 @@ int main()
 
 void PrintIntro()
 {
-    constexpr int WORD_LENGTH = 7;
+    constexpr int32 WORD_LENGTH = 7;
     std::cout << "Welcome to Bulls and Cows." << std::endl;
     std::cout << "Can you guess the " << WORD_LENGTH << " letter isogram I'm thinking of?\n";
 }
@@ -38,7 +38,7 @@ void PlayGame()
     BCGame.Reset();
     // loop for number of turns asking for guesses
     //TODO change to while loop after checking for valid guess function is complete
-    for (int i = 0; i < BCGame.GetMaxTries(); i++) {
+    for (int32 i = 0; i < BCGame.GetMaxTries(); i++) {
         FText Guess = GetGuess();//TODO check for valid guess
 
         //Submit valid guess to game

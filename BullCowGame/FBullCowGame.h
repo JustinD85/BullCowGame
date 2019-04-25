@@ -2,14 +2,15 @@
 #include <string>
 
 using FString = std::string;
+using int32 = int;
 
 class FBullCowGame {
 public:
     FBullCowGame(); //constructor
     ~FBullCowGame(); //destructor
 
-    int GetMaxTries() const;
-    int GetCurrentTry() const;
+    int32 GetMaxTries() const;
+    int32 GetCurrentTry() const;
     bool IsGameWon() const;
 
     void Reset(); //TODO enhance return value.
@@ -18,7 +19,7 @@ public:
 
 private:
     //constructor initializes these
-    int MyCurrentTry;
-    int MyMaxTries;
+    int32 MyCurrentTry;
+    int32 MyMaxTries;
     bool IsIsoGram();
 };
