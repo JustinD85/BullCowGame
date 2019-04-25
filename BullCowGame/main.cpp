@@ -10,7 +10,12 @@ string GetGuess();
 int main() {
 	
 	PrintIntro();
-	GetGuess();
+
+	// loop for number of turns asking for guesses
+	constexpr int NUMBER_OF_TURNS = 5;
+	for (int i = 0; i < NUMBER_OF_TURNS; i++) {
+		GetGuess();
+	}
 	return 0;
 }
 
@@ -21,8 +26,8 @@ void PrintIntro() {
 	cout << "Can you guess the " << WORD_LENGTH << " letter isogram I'm thinking of?\n";
 }
 
-// Get guess from player
 string GetGuess() {
+	// Get guess from player
 	string Guess = "";
 	getline(cin, Guess);
 	// repeat the guess back to player
