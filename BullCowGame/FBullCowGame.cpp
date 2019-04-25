@@ -30,6 +30,11 @@ bool FBullCowGame::CheckGuessValidity(FString)
     return false;
 }
 
+BullCowCount FBullCowGame::SubmitGuess(FString)
+{
+    return BullCowCount();
+}
+
 bool FBullCowGame::IsIsoGram()
 {
     return false;
