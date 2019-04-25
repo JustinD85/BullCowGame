@@ -25,7 +25,7 @@ bool FBullCowGame::IsGameWon() const
     return false;
 }
 
-bool FBullCowGame::CheckGuessValidity(std::string)
+bool FBullCowGame::CheckGuessValidity(FString)
 {
     return false;
 }
