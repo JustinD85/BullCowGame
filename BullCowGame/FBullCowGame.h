@@ -10,6 +10,7 @@ struct FBullCowCount {
 };
 
 enum EGuessStatus {
+    Invalid_Status,
     OK,
     Not_Isogram,
     Not_Lowercase,
@@ -28,7 +29,7 @@ public:
     bool IsGameWon() const;
 
     void Reset(); //TODO enhance return value.
-    FBullCowCount SubmitGuess(FString);
+    FBullCowCount SubmitValidGuess(FString);
 
 private:
     //constructor initializes these
