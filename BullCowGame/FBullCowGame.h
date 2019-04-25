@@ -9,9 +9,6 @@ public:
     bool IsGameWon();
     bool CheckGuessValidity(std::string); //TODO enhance return value.
 
-
-
-
 private:
     int MyCurrentTry;
     int MyMaxTries;

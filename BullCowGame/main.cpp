@@ -6,7 +6,6 @@ void PlayGame();
 bool AskToPlayAgain();
 std::string GetGuess();
 
-//Entry point of application
 int main()
 {
     do {
@@ -17,8 +16,6 @@ int main()
     return 0;
 }
 
-
-// Game introduction
 void PrintIntro()
 {
     constexpr int WORD_LENGTH = 7;
@@ -47,7 +44,6 @@ bool AskToPlayAgain()
 
 std::string GetGuess()
 {
-    // Get guess from player
     std::string Guess = "";
     std::getline(std::cin, Guess);
 
