@@ -4,6 +4,7 @@
 using namespace std;
 
 void PrintIntro();
+void PlayGame();
 string GetGuess();
 
 //Entry point of application
@@ -11,13 +12,10 @@ int main() {
 
     PrintIntro();
 
-    // loop for number of turns asking for guesses
-    constexpr int NUMBER_OF_TURNS = 5;
-    for (int i = 0; i < NUMBER_OF_TURNS; i++) {
-        GetGuess();
-    }
+    PlayGame();
     return 0;
 }
+
 
 // Game introduction
 void PrintIntro() {
@@ -26,11 +24,20 @@ void PrintIntro() {
     cout << "Can you guess the " << WORD_LENGTH << " letter isogram I'm thinking of?\n";
 }
 
+void PlayGame()
+{
+    // loop for number of turns asking for guesses
+    constexpr int NUMBER_OF_TURNS = 5;
+    for (int i = 0; i < NUMBER_OF_TURNS; i++) {
+        string Guess = GetGuess();
+        cout << "your guess was " << Guess << endl;
+    }
+}
+
 string GetGuess() {
     // Get guess from player
     string Guess = "";
     getline(cin, Guess);
-    // repeat the guess back to player
-    cout << "your guess was " << Guess << endl;
+
     return Guess;
 }
