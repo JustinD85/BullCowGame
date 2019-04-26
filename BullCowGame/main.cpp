@@ -7,8 +7,7 @@ user interaction. For game logic see FBullCowGame class.
 #include <string>
 #include "FBullCowGame.h"
 
-using FText = FString;
-using int32 = int;
+using FText = std::string;
 
 FBullCowGame BCGame; //instantiates a new game
 void PrintIntro();

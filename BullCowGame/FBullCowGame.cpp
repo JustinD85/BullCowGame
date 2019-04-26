@@ -1,4 +1,6 @@
 #include "FBullCowGame.h"
+#include <map>
+#define TMap std::map
 
 FBullCowGame::FBullCowGame()
 {
@@ -14,6 +16,21 @@ int32 FBullCowGame::GetCurrentTry() const { return MyCurrentTry; }
 int32 FBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); }
 bool FBullCowGame::IsGameWon() const { return bIsGameWon; }
 
+bool FBullCowGame::IsIsogram(FString Guess) const
+{
+    TMap<char, bool> SeenLetters;
+
+    for (auto Letter : Guess) {
+        Letter = tolower(Letter);
+
+        //Tmap sets default value to false when accessed for first time
+        if (SeenLetters[Letter]) return false;
+        else SeenLetters[Letter] = true;
+    }
+
+    return true;
+}
+
 void FBullCowGame::Reset()
 {
     constexpr int32 MAX_TRIES = 8;
@@ -27,7 +44,7 @@ void FBullCowGame::Reset()
 
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 {
-    if (false) {
+    if (!IsIsogram(Guess)) {
         return EGuessStatus::Not_Isogram; //Write function
     }
     else if (false) {
