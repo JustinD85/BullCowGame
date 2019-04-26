@@ -15,6 +15,7 @@ void PlayGame();
 bool AskToPlayAgain();
 FText GetValidGuess();
 void PrintGameSummary();
+void PrintCharmander();
 
 int main()
 {
@@ -31,6 +32,7 @@ void PrintIntro()
     system("CLS");
     std::cout << "Welcome to Bulls and Cows." << std::endl;
     std::cout << "Can you guess the " << BCGame.GetHiddenWordLength() << " letter isogram I'm thinking of?\n\n";
+    PrintCharmander();
 }
 
 void PlayGame()
@@ -101,4 +103,46 @@ void PrintGameSummary()
     else {
         std::cout << "Better Luck Next Time!\n";
     }
+}
+
+void PrintCharmander()
+{
+    std::cout << R"(
+                          ,-'`\
+                  _,"'    j
+           __....+       /               .
+       ,-'"             /               ; `-._.'.
+      /                (              ,'       .'
+     |            _.    \             \   ---._ `-.
+     ,|    ,   _.'  Y    \             `- ,'   \   `.`.
+     l'    \ ,'._,\ `.    .              /       ,--. l
+  .,-        `._  |  |    |              \       _   l .
+ /              `"--'    /              .'       ``. |  )
+.\    ,                 |                .        \ `. '
+`.                .     |                '._  __   ;. \'
+  `-..--------...'       \                  `'  `-"'.  \
+      `......___          `._                        |  \
+               /`            `..                     |   .
+              /|                `-.                  |    L
+             / |               \   `._               .    |
+           ,'  |,-"-.   .       .     `.            /     |
+         ,'    |     '   \      |       `.         /      |
+       ,'     /|       \  .     |         .       /       |
+     ,'      / |        \  .    +          \    ,'       .'
+    .       .  |         \ |     \          \_,'        / j
+    |       |  L          `|      .          `        ,' '
+    |    _. |   \          /      |           .     .' ,'
+    |   /  `|    \        .       |  /        |   ,' .'
+    |   ,-..\     -.     ,        | /         |,.' ,'
+    `. |___,`    /  `.   /`.       '          |  .'
+      '-`-'     j     ` /."7-..../|          ,`-'
+                |        .'  / _/_|          .
+                `,       `"'/"'    \          `.
+                  `,       '.       `.         |
+             __,.-'         `.        \'       |
+            /_,-'\          ,'        |        _.
+             |___.---.   ,-'        .-':,-"`\,' .
+                  L,.--"'           '-' |  ,' `-.\
+                                        `.
+)" << std::endl;
 }
