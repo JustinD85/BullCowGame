@@ -30,7 +30,7 @@ void PrintIntro()
 {
     system("CLS");
     std::cout << "Welcome to Bulls and Cows." << std::endl;
-    std::cout << "Can you guess the " << BCGame.GetHiddenWordLength() << " letter isogram I'm thinking of?\n";
+    std::cout << "Can you guess the " << BCGame.GetHiddenWordLength() << " letter isogram I'm thinking of?\n\n";
 }
 
 void PlayGame()
@@ -47,12 +47,11 @@ void PlayGame()
 
         std::cout << "Bulls = " << BullCowCount.Bulls << std::endl;
         std::cout << "Cows = " << BullCowCount.Cows << std::endl;
-        std::cout << "your guess was " << Guess << std::endl << std::endl;
+        std::cout << std::endl;
 
     }
 
     PrintGameSummary();
-
 }
 
 bool AskToPlayAgain()
@@ -60,8 +59,8 @@ bool AskToPlayAgain()
     std::cout << "Do you want to play again (y/n)? \n";
     FText Response = "";
     std::getline(std::cin, Response);
-    return (Response[0] == 'y' || Response[0] == 'Y');
 
+    return (Response[0] == 'y' || Response[0] == 'Y');
 }
 
 // loop continously until valid guess is entered
@@ -69,7 +68,8 @@ FText GetValidGuess()
 {
     EGuessStatus Status = EGuessStatus::Invalid_Status;
     do {
-        std::cout << "Try " << BCGame.GetCurrentTry() << std::endl;
+        std::cout << "Try " << BCGame.GetCurrentTry() << " of " << BCGame.GetMaxTries() << ". ";
+        std::cout << "Enter a guess: ";
         FText Guess = "";
         std::getline(std::cin, Guess);
 

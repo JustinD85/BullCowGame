@@ -35,6 +35,7 @@ public:
 private:
     bool IsIsogram(FString) const;
     bool IsLowercase(FString) const;
+
     //constructor initializes these
     int32 MyCurrentTry;
     int32 MyMaxTries;
