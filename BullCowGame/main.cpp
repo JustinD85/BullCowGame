@@ -52,8 +52,6 @@ void PlayGame()
 
     }
 
-
-    // TODO summarize game
     PrintGameSummary();
 
 }

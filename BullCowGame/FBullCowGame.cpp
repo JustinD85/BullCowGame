@@ -28,10 +28,10 @@ void FBullCowGame::Reset()
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 {
     if (false) {
-        return EGuessStatus::Not_Isogram;
+        return EGuessStatus::Not_Isogram; //Write function
     }
     else if (false) {
-        return EGuessStatus::Not_Lowercase;
+        return EGuessStatus::Not_Lowercase; //Write function
     }
     else if (Guess.length() != GetHiddenWordLength()) {
         return EGuessStatus::Wrong_Word_Length;

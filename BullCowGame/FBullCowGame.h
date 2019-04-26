@@ -25,10 +25,10 @@ public:
     int32 GetMaxTries() const;
     int32 GetCurrentTry() const;
     int32 GetHiddenWordLength() const;
-    EGuessStatus CheckGuessValidity(FString) const; //TODO enhance return value.
+    EGuessStatus CheckGuessValidity(FString) const;
     bool IsGameWon() const;
 
-    void Reset(); //TODO enhance return value.
+    void Reset();
     FBullCowCount SubmitValidGuess(FString);
 
 
