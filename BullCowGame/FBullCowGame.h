@@ -31,6 +31,7 @@ public:
     void Reset(); //TODO enhance return value.
     FBullCowCount SubmitValidGuess(FString);
 
+
 private:
     //constructor initializes these
     int32 MyCurrentTry;
