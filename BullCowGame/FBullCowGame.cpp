@@ -31,6 +31,14 @@ bool FBullCowGame::IsIsogram(FString Guess) const
     return true;
 }
 
+bool FBullCowGame::IsLowercase(FString Guess) const
+{
+    for (auto Letter : Guess) {
+        if (Letter != tolower(Letter)) return false;
+    }
+    return true;
+}
+
 void FBullCowGame::Reset()
 {
     constexpr int32 MAX_TRIES = 8;
@@ -45,10 +53,10 @@ void FBullCowGame::Reset()
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 {
     if (!IsIsogram(Guess)) {
-        return EGuessStatus::Not_Isogram; //Write function
+        return EGuessStatus::Not_Isogram;
     }
-    else if (false) {
-        return EGuessStatus::Not_Lowercase; //Write function
+    else if (!IsLowercase(Guess)) {
+        return EGuessStatus::Not_Lowercase;
     }
     else if (Guess.length() != GetHiddenWordLength()) {
         return EGuessStatus::Wrong_Word_Length;
@@ -87,5 +95,3 @@ FBullCowCount FBullCowGame::SubmitValidGuess(FString Guess)
 
     return BullCowCount;
 }
-
-
