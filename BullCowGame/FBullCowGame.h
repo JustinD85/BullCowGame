@@ -38,7 +38,6 @@ private:
 
     //constructor initializes these
     int32 MyCurrentTry;
-    int32 MyMaxTries;
     FString MyHiddenWord;
     bool bIsGameWon;
 };
