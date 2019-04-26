@@ -37,7 +37,7 @@ void PlayGame()
     BCGame.Reset();
 
     // loop for number of turns asking for guesses
-    for (int32 i = 0; i < BCGame.GetMaxTries(); i++) {//TODO change to while loop after checking for valid guess function is complete
+    while (!BCGame.IsGameWon() && BCGame.GetCurrentTry() <= BCGame.GetMaxTries()) {
         FText Guess = GetValidGuess();
 
         //Submit valid guess to game
@@ -46,7 +46,9 @@ void PlayGame()
         std::cout << "Bulls = " << BullCowCount.Bulls << std::endl;
         std::cout << "Cows = " << BullCowCount.Cows << std::endl;
         std::cout << "your guess was " << Guess << std::endl << std::endl;
+
     }
+
 
     // TODO summarize game
 }
