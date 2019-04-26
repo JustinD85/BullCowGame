@@ -1,6 +1,11 @@
+/*
+    The Game logic (no view code or direct user interaction)
+    The game is a simple clone of the game Mastermind: 'https://en.wikipedia.org/wiki/Mastermind_(board_game)'
+*/
 #pragma once
 #include <string>
 
+//To make code Unreal *friendly*
 using FString = std::string;
 using int32 = int;
 

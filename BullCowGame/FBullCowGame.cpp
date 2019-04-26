@@ -1,6 +1,6 @@
 #include "FBullCowGame.h"
 #include <map>
-#define TMap std::map
+#define TMap std::map //To make code Unreal *friendly*
 
 FBullCowGame::FBullCowGame()
 {
@@ -48,7 +48,7 @@ bool FBullCowGame::IsLowercase(FString Guess) const
 void FBullCowGame::Reset()
 {
     constexpr int32 MAX_TRIES = 8;
-    const FString HIDDEN_WORD = "planet";
+    const FString HIDDEN_WORD = "planet";//MUST BE ISOGRAM
 
     MyHiddenWord = HIDDEN_WORD;
     MyCurrentTry = 1;

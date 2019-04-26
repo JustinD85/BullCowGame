@@ -7,6 +7,7 @@ user interaction. For game logic see FBullCowGame class.
 #include <string>
 #include "FBullCowGame.h"
 
+//To make code Unreal *friendly*
 using FText = std::string;
 
 FBullCowGame BCGame; //instantiates a new game
